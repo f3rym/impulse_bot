@@ -86,7 +86,7 @@ class CEXMonitor:
         return None
 
     async def fetch_lbank_spot(self, session, symbol):
-        # Сначала получаем все символы
+
         all_symbols = await self.fetch_lbank_symbols(session)
         if not all_symbols:
             file_logger.print_status(f"❌ Не удалось получить список символов LBank для {symbol}")
